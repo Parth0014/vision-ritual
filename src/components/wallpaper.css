@@ -1,0 +1,110 @@
+/* Wallpaper export modal — Vision Ritual */
+
+.wall__title {
+  font-size: 26px;
+  margin: 2px 0 0;
+}
+
+.wall__sub {
+  margin-bottom: 18px;
+}
+
+/* segmented mode toggle */
+.wall__seg {
+  display: flex;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px;
+  margin: 0 0 12px;
+}
+
+.wall__seg button {
+  flex: 1;
+  appearance: none;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.wall__seg button.is-active {
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+/* goal chips (focus mode) */
+.wall__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.wall__chips button {
+  appearance: none;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  border-radius: 999px;
+  padding: 8px 14px;
+  max-width: 100%;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wall__chips button.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+/* hidden render canvas + live preview */
+.wall__canvas {
+  display: none;
+}
+
+.wall__preview {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: var(--paper-deep);
+}
+
+/* actions */
+.wall__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.wall__actions .btn {
+  flex: 1;
+}
+
+/* empty state */
+.wall__empty {
+  text-align: center;
+  padding: 20px 8px 4px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.wall__empty .btn {
+  margin-top: 12px;
+}
