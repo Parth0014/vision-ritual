@@ -1,0 +1,179 @@
+/* Onboarding wizard — calm, ritual-like, warm paper. Mobile-first. */
+
+.onb {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px calc(28px + env(safe-area-inset-bottom));
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ---------- progress ---------- */
+.onb__steps {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0 0 28px;
+  padding: 0;
+  justify-content: center;
+}
+.onb__step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.onb__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--muted);
+  background: transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.onb__step--done .onb__dot {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.onb__step--now { color: var(--ink); }
+.onb__step--now .onb__dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.onb__step--done .onb__label { color: var(--ink-soft); }
+
+/* ---------- panes ---------- */
+.onb__pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.onb__title {
+  font-size: 34px;
+  margin: 0 0 4px;
+}
+.onb__pane .sub { margin-bottom: 20px; }
+
+/* ---------- step 0: goal inputs ---------- */
+.onb__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.onb__row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.onb__row .input { flex: 1; }
+.onb__remove {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.onb__remove:hover { color: var(--accent-deep); border-color: var(--accent); }
+.onb__add {
+  align-self: flex-start;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* ---------- step 1: shaped cards ---------- */
+.onb__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.onb__card .input { margin-bottom: 12px; }
+.onb__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.onb__chip {
+  appearance: none;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.onb__chip:hover { border-color: var(--accent); color: var(--ink); }
+.onb__chip--on {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* ---------- step 2: review ---------- */
+.onb__review {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.onb__review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.onb__review-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.onb__review-area {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.onb__review-aff {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ---------- footer ---------- */
+.onb__foot {
+  margin-top: auto;
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.onb__foot--split {
+  justify-content: space-between;
+  gap: 12px;
+}
+.onb__foot--split .btn { flex: 1; }
+.onb__cta { min-width: 220px; }
+
+@media (min-width: 760px) {
+  .onb__title { font-size: 40px; }
+}

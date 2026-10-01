@@ -1,0 +1,248 @@
+/* Review screen — calm weekly ritual, warm paper. */
+
+.rv-section { margin-bottom: 22px; }
+.rv-section:last-child { margin-bottom: 0; }
+.rv-section-title { margin: 4px 0 10px; }
+
+.rv-card { margin-bottom: 0; }
+.rv-block-btn { width: 100%; margin-top: 14px; }
+
+.rv-last-reviewed {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin: 6px 0 0;
+}
+
+.rv-confirm {
+  margin: 10px 0 0;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--sage-soft);
+  color: var(--sage);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ---------- review flow ---------- */
+.rv-step {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.rv-goal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.rv-area { margin-bottom: 4px; }
+.rv-goal-title { font-size: 22px; }
+
+.rv-plan {
+  margin: 12px 0 18px;
+  padding: 12px 14px 12px 16px;
+  border-left: 3px solid var(--accent-soft);
+  background: var(--paper);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.rv-hit-row {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 18px;
+}
+
+.rv-hit-btn {
+  flex: 1;
+  padding: 12px 8px;
+  font-size: 14px;
+}
+
+.rv-hit-btn--on {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.rv-progress-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 18px 0 4px;
+}
+
+.rv-progress-val {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.rv-slider {
+  width: 100%;
+  margin: 6px 0 4px;
+  accent-color: var(--accent);
+}
+
+.rv-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.rv-footer .btn { flex: 1; padding: 13px 10px; font-size: 15px; }
+
+/* ---------- summary ---------- */
+.rv-summary-title { font-size: 22px; margin: 0 0 12px; }
+
+.rv-summary-list {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+.rv-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.rv-summary-row:last-child { border-bottom: none; }
+
+.rv-summary-title-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.rv-summary-progress {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent-deep);
+}
+
+/* ---------- history ---------- */
+.rv-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.rv-history-item { padding: 0; overflow: hidden; }
+
+.rv-history-toggle {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.rv-history-dates {
+  font-weight: 700;
+  font-size: 15px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.rv-history-meta {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.rv-came-true-count {
+  color: var(--accent-deep);
+}
+
+.rv-history-chevron {
+  font-size: 20px;
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.rv-board-goals {
+  list-style: none;
+  margin: 0;
+  padding: 0 18px 16px;
+}
+
+.rv-board-goal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.rv-board-goal--muted {
+  opacity: 0.55;
+  font-weight: 400;
+}
+
+.rv-badge {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+/* ---------- backup ---------- */
+.rv-backup-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.rv-backup-row .btn { flex: 1; padding: 13px 8px; font-size: 15px; }
+
+.rv-file-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.rv-import-msg {
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rv-import-msg--ok { color: var(--sage); }
+.rv-import-msg--err { color: var(--accent-deep); }
